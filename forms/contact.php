@@ -20,14 +20,14 @@
   // $contact->from_name = $_POST['name'];
   // $contact->from_email = $_POST['email'];
   // $contact->subject = $_POST['subject'];
-  $to = 'irankundafabrice9@gmail.com';
+  $to = 'info@ipgilgallaw.com';
   $from_name = $_POST['name'];
   $from_email = $_POST['email'];
   $subject = $_POST['subject'];
-  $message = $_POST['message']
+  $message = $_POST['message'];
 
-  $body= "Name: $from_name.\n",
-          "Email: $from_email.\n",
+  $body= "Name: $from_name.\n".
+          "Email: $from_email.\n".
           "Message: $message.\n";
   
   

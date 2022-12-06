@@ -151,9 +151,9 @@
   });
 
   function php_email_form_submit(this_form, action, data) {
-    console.log("action:  =>" + action);
-    console.log("action:  =>" + this_form);
-    console.log("action:  =>" + data);
+    // console.log("action:  =>" + action);
+    // console.log("action:  =>" + this_form);
+    // console.log("action:  =>" + data);
     $.ajax({
       type: "POST",
       url: action,
@@ -161,21 +161,21 @@
       timeout: 40000,
     })
       .done(function (msg) {
-        console.log(msg);
-        if (msg.trim() == "OK") {
+        // console.log(msg);
+        // if (msg.trim() == "OK") {
           this_form.find(".loading").slideUp();
           this_form.find(".sent-message").slideDown();
           this_form.find("input:not(input[type=submit]), textarea").val("");
-        } else {
-          this_form.find(".loading").slideUp();
-          if (!msg) {
-            msg =
-              "Form submission failed and no error message returned from: " +
-              action +
-              "<br>";
-          }
-          this_form.find(".error-message").slideDown().html(msg);
-        }
+        // } else {
+        //   this_form.find(".loading").slideUp();
+        //   if (!msg) {
+        //     msg =
+        //       "Form submission failed and no error message returned from: " +
+        //       action +
+        //       "<br>";
+        //   }
+        //   this_form.find(".error-message").slideDown().html(msg);
+        // }
       })
       .fail(function (data) {
         console.log(data);
